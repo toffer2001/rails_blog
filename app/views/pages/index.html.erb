@@ -1,0 +1,19 @@
+
+<!-- echo tag, display information -->
+<%= %>
+
+<!-- non echo, loops, condition -->
+<% %>
+
+<h1>All Pages</h1>
+<ul>
+<% @pages.each do |page| %>
+  <li>
+  <%= page.title %>
+  <%= link_to 'Show Page', page_path(page) %>
+  <%= link_to 'Edit Page', edit_page_path(page) %>
+  <%= link_to 'Delete Page', page, method: :delete %>
+  </li>
+<% end %>
+</ul>
+<%= link_to 'New Page', new_page_path %>

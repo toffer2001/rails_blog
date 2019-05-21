@@ -1,0 +1,14 @@
+<%= form_for @page do |f| %>
+  <%= f.label :title%>
+  <%= f.text_field :title %>
+  <p>
+  <%= f.label :author %>
+  <%= f.text_field :author %>
+  </p>
+  <p>
+  <%= f.label :body %>
+  <%= f.text_area :body %>
+  </p>
+  <%= f.submit %>
+
+<% end %>
